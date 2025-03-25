@@ -1,0 +1,11 @@
+<h2>{{ data.id ? 'Edit Employee' : 'Add Employee' }}</h2>
+<form [formGroup]="employeeForm" (ngSubmit)="submit()">
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" required />
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Salary" formControlName="salary" required type="number" />
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Save</button>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+</form>
